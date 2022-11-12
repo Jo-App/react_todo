@@ -40,7 +40,7 @@
   overflow-y: auto;
 }
 
-.item {
+.container {
   display: flex;
   justify-content: space-between;
   padding: 2% 2%;
@@ -58,11 +58,20 @@
   width: 19px;
   height: 14px;
   accent-color: #F28F38;
+  cursor: pointer;
+}
+
+.item {
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .text {
-  font-size: 18px;
   color: white;
+}
+.done {
+  text-decoration-line: line-through;
+  color: gray;
 }
 
 .icon {
@@ -75,6 +84,7 @@
   background-color: #5A6073;
   color: white;
   font-size: 12px;
+  cursor: pointer;
 }
 
 .footer {
