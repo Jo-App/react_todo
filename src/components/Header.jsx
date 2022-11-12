@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 import styles from '../styles/todo.module.css';
+import { DarkModeContext } from '../context/DarkModeContext';
 
-export default function header() {
+export default function Header() {
+  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   return (
     <div className={styles.header}>
       <section className={styles.setting}>
-        <BsFillSunFill color="white"></BsFillSunFill>
-        {/* <BsFillMoonFill color="white"></BsFillMoonFill> */}
+        {darkMode ? 
+          <BsFillMoonFill onClick={() => toggleDarkMode()} color="white"></BsFillMoonFill> :
+          <BsFillSunFill onClick={() => toggleDarkMode()} color="white"></BsFillSunFill>
+        }
       </section>
       <section>
         <ul className={styles.tabs}>

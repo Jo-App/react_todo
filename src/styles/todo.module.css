@@ -100,14 +100,20 @@
   width: 80%;
   border-radius: 5px 0 0 5px;
   border: none;
+  padding-left: 10px;
 }
 
-.inp::placeholder {
+/* .inp::placeholder {
   padding-left:10px;
+} */
+
+.inp:focus {
+  outline: none;
 }
 
 .btn {
   display: flex;
+  border: 0;
   justify-content: center;
   align-items: center;
   background-color: #F28F38;

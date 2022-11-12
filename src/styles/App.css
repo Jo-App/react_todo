@@ -6,14 +6,14 @@ body {
   overflow: hidden;
 }
 
-.Container {
+.container {
   display: flex;
   background-color: #5A6073;
   width: 100%;
   height: 100vh;
 }
 
-.Todo {
+.todo {
   margin: auto;
   width: 500px;
   border-radius: 8%;
