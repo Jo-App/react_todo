@@ -1,5 +1,5 @@
 .header {
-  background-color: #1D2240;
+  background-color: var(--color-bg-dark);
   display: flex;
   justify-content: space-between;
   padding: 0 2%;
@@ -23,7 +23,7 @@
 .tabs li {
   margin: 2%;
   padding: 2%;
-  color: #F28F38;
+  color: var(--color-accent);
   font-weight: 600;
   cursor: pointer;
 }
@@ -31,12 +31,12 @@
 .tab_active {
   text-decoration: underline;
   text-underline-position:under;
-  text-decoration-color: white;
+  text-decoration-color: var(--color-text);
 }
 
 .list {
-  background-color: #27293D;
-  max-height: 335px;
+  background-color: var(--color-bg);
+  height: 400px;
   overflow-y: auto;
 }
 
@@ -57,7 +57,7 @@
 .checkBox {
   width: 19px;
   height: 14px;
-  accent-color: #F28F38;
+  accent-color: var(--color-accent);
   cursor: pointer;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .text {
-  color: white;
+  color: var(--color-text);
 }
 .done {
   text-decoration-line: line-through;
@@ -88,7 +88,7 @@
 }
 
 .footer {
-  background-color: #1D2240;
+  background-color: var(--color-bg-dark);
   display: flex;
   justify-content: center;
   border-radius: 0 0 10px 10px;
@@ -116,7 +116,7 @@
   border: 0;
   justify-content: center;
   align-items: center;
-  background-color: #F28F38;
+  background-color: var(--color-accent);
   color: white;
   width: 20%;
   height: 37px;

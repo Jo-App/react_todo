@@ -5,10 +5,7 @@ export const TodoActionContext = createContext();
 
 export function TodoActionProvider({ children }) {
   const [todoList, updateTodoList] = useImmer(todoItems);
-  const [isList, setIsList] = useState(false);
-  // useEffect(() => {
-
-  // }, []);
+  const [filter, setFilter] = useState('All');
 
   const changeTodo = (id) => {
     updateTodoList((todoList) => {
@@ -25,9 +22,13 @@ export function TodoActionProvider({ children }) {
   }
 
   const AddTodo = (text) => {
-    setIsList(false);
     try {
-      const lastId = todoList[todoList.length-1].id + 1;
+      let lastId;
+      if(todoList.length === 0) {
+        lastId = 1;
+      } else {
+        lastId = todoList[todoList.length-1].id + 1;
+      }
       updateTodoList((todoList) => {
         todoList.push({
           id: lastId,
@@ -35,17 +36,15 @@ export function TodoActionProvider({ children }) {
           isDone: false,
         });
       })
-      setIsList(true);
       return true;
     } catch (err) {
       alert('에러!');
-      setIsList(false);
       return false;
     }
   }
 
   return (
-    <TodoActionContext.Provider value={{ todoList, changeTodo, deleteTodo, AddTodo, isList, setIsList }} >
+    <TodoActionContext.Provider value={{ todoList, changeTodo, deleteTodo, AddTodo, filter, setFilter }} >
       {children}
     </TodoActionContext.Provider>
   )
