@@ -123,3 +123,15 @@
   border-radius: 0 5px 5px 0;
   font-weight: 600;
 }
+
+.noneItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.span {
+  color: var(--color-text);
+  margin: auto;
+}

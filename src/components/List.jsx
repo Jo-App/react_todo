@@ -32,7 +32,10 @@ export default function List() {
         listFilter(filter, todoList).map(item => {
           return (<Item key={item.id} item={item}></Item>)
         })
-        : '목록이 없습니다.'
+        : 
+        <div className={styles.noneItem}>
+          <span className={styles.span}>목록이 없습니다.</span>
+        </div>
       }
     </div>
   );
